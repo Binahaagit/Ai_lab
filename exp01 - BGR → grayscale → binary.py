@@ -16,3 +16,9 @@ cv2.imwrite("binary.jpg", binary)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
+
+#imread → cvtColor → threshold → imshow → imwrite → waitKey → destroyAllWindows
+
+# waitKey(0) → Keeps the image window open until a key is pressed
+# destroyAllWindows() → Closes all OpenCV windows

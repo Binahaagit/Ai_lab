@@ -34,7 +34,7 @@ cv2.destroyAllWindows()
 
 # img.shape[0] → Height (no of rows)
 # img.shape[1] → Width (no of columns)
-# np.zeros() → Creates an array filled with 0 (black)
+# np.zeros() → Creates an array filled with 0(black)
 # dtype = data type
 # uint8 → Pixel values range from 0 to 255
 # np.zeros_like(gray) → Creates a zero-filled array like gray

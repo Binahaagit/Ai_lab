@@ -42,3 +42,9 @@ print(count_4)
 
 print("\n8-neighbour counts:")
 print(count_8)
+
+
+# 4-neighbours → 4 directions
+# 8-neighbours → 8 directions
+# Same colour → binary[nr, nc] == current_color
+# nr = r + dr, nc = c + dc → find neighbour position

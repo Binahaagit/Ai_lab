@@ -17,3 +17,9 @@ cv2.imshow("Blending", blended)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
+
+#resize -> add -> subtract -> addWeighted
+#Addnl info:😌
+#blend formula = α × img1 + β × img2 + γ 
+#So here, 0.5 × img1 + 0.5 × img2 + 0 (0 is gamma value to adjust brightness)

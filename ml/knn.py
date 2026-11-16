@@ -1,7 +1,6 @@
 # EXPERIMENT 24: KNN CLASSIFICATION
 # DATASET: IRIS DATASET
 
-
 # ============================================================
 # CODE 1: KNN USING SCIKIT-LEARN (EASIEST METHOD)
 # ============================================================

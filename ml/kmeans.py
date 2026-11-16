@@ -35,8 +35,6 @@ plt.show()
 
 
 
-
-
 ## EXPLANATION ##
 # 1. Import required libraries
 import pandas as pd

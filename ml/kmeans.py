@@ -1,4 +1,3 @@
-
 # EXPERIMENT 23: K-MEANS CLUSTERING
 # Perform K-Means clustering on a dataset and visualize the clusters for K = 2, 3 and 4.
 

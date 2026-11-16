@@ -114,6 +114,7 @@ plt.show()
 # 7. WCSS / Inertia measures the sum of squared distances between points and their assigned centroids.
 # 8. K-Means tries to minimize WCSS.
 # 9. fit_predict() fits the model and returns cluster labels.
+
 # 10. cluster_centers_ returns centroid coordinates.
 # 11. Increasing K generally decreases or maintains WCSS.(Within-Cluster Sum of Squares)
 # 12. Elbow method helps select a suitable K.

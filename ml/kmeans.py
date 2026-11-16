@@ -2,6 +2,47 @@
 # EXPERIMENT 23: K-MEANS CLUSTERING
 # Perform K-Means clustering on a dataset and visualize the clusters for K = 2, 3 and 4.
 
+#CODE:
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.cluster import KMeans
+
+df = pd.read_csv('csv1.csv')
+X = df.iloc[:, :2].values
+
+fig, axes = plt.subplots(2, 2, figsize=(12, 10))
+axes = axes.flatten()
+
+axes[0].scatter(X[:, 0], X[:, 1], c='gray', s=50)
+axes[0].set_title("Before Clustering", fontsize=14)
+
+k_values = [2, 3, 4]
+
+for idx, k in enumerate(k_values, start=1):
+    kmeans = KMeans(n_clusters=k, random_state=42, n_init=10)
+    labels = kmeans.fit_predict(X)
+    centroids = kmeans.cluster_centers_
+
+    axes[idx].scatter(X[:, 0], X[:, 1], c=labels, cmap='viridis', s=50)
+    axes[idx].scatter(
+        centroids[:, 0], centroids[:, 1],
+        c='red', marker='X', s=150
+    )
+    axes[idx].set_title(f"K-Means (k={k})", fontsize=14)
+
+plt.tight_layout()
+plt.show()
+
+
+
+
+
+
+
+
+
+
+## EXPLANATION ##
 # 1. Import required libraries
 import pandas as pd
 import matplotlib.pyplot as plt

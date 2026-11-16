@@ -22,7 +22,7 @@ for idx, k in enumerate(k_values, start=1):
     labels = kmeans.fit_predict(X)
     centroids = kmeans.cluster_centers_
 
-    axes[idx].scatter(X[:, 0], X[:, 1], c=labels, cmap='viridis', s=50)
+    axes[idx].scatter(X[:, 0], X[:, 1], c=labels)  #addnl parameters which are optional here - cmap='viridis', s=50
     axes[idx].scatter(
         centroids[:, 0], centroids[:, 1],
         c='red', marker='X', s=150

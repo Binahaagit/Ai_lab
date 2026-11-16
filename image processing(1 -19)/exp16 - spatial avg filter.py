@@ -27,7 +27,6 @@ cv2.destroyAllWindows()
 
 
 
-
 ## USING MATPLOTLIB ##
 
 import cv2

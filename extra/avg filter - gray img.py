@@ -2,7 +2,7 @@
 import cv2
 import numpy as np
 
-img = cv2.imread("input.jpg", 0)
+img = cv2.imread("input.jpg", 0)  #0 to read as gray img
 
 # Create 3x3 averaging kernel
 kernel = np.ones((3, 3), np.float32) / 9

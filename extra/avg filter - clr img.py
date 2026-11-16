@@ -1,4 +1,4 @@
-
+# 2 changes as in from gray 
 import cv2
 import numpy as np
 

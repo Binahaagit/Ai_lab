@@ -1,3 +1,5 @@
+## CODE 1 (WITHOUT USING AS FUNCTION)
+
 import cv2
 import numpy as np
 
@@ -48,3 +50,38 @@ print(count_8)
 # 8-neighbours → 8 directions
 # Same colour → binary[nr, nc] == current_color
 # nr = r + dr, nc = c + dc → find neighbour position
+
+
+
+## CODE USING FUNCTION - SHORT
+
+import cv2
+import numpy as np
+
+img = cv2.imread("input.jpg", 0)
+_, binary = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY)
+
+h, w = binary.shape
+
+d4 = [(-1,0), (1,0), (0,-1), (0,1)]
+d8 = d4 + [(-1,-1), (-1,1), (1,-1), (1,1)]
+
+def count_neighbours(directions):
+    count = np.zeros((h,w), dtype=int)
+
+    for r in range(h):
+        for c in range(w):
+            for dr, dc in directions:
+                nr, nc = r+dr, c+dc
+
+                if 0 <= nr < h and 0 <= nc < w:
+                    if binary[nr,nc] == binary[r,c]:
+                        count[r,c] += 1
+
+    return count
+
+count_4 = count_neighbours(d4)
+count_8 = count_neighbours(d8)
+
+print("4-neighbour counts:\n", count_4)
+print("8-neighbour counts:\n", count_8)

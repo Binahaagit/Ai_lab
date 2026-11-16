@@ -1,3 +1,35 @@
+## WITHOUT MATPLOTLIB ##
+
+import cv2
+import numpy as np
+
+img = cv2.imread("input.jpg")
+
+# Create averaging filters
+k3 = np.ones((3, 3), np.float32) / 9
+k5 = np.ones((5, 5), np.float32) / 25
+k7 = np.ones((7, 7), np.float32) / 49
+
+# Apply filters
+filter3 = cv2.filter2D(img, -1, k3)
+filter5 = cv2.filter2D(img, -1, k5)
+filter7 = cv2.filter2D(img, -1, k7)
+
+# Display results
+cv2.imshow("Original", img)
+cv2.imshow("3x3 Filter", filter3)
+cv2.imshow("5x5 Filter", filter5)
+cv2.imshow("7x7 Filter", filter7)
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+
+
+
+
+## USING MATPLOTLIB ##
+
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt

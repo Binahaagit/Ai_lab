@@ -90,11 +90,11 @@ Implement a Naive Bayes classifier to predict a class based on input features fr
 - Laplace smoothing.
 
 ### 🧮 Bayes' Theorem
-
+$$
 \[
 P(C|X)=\frac{P(X|C)P(C)}{P(X)}
 \]
-
+$$
 Where:
 
 - \(P(C|X)\) → Posterior probability.
@@ -428,32 +428,32 @@ Off-diagonal → Incorrect predictions
 - FN → False Negative.
 
 #### Accuracy
-
+$$
 \[
 Accuracy=\frac{TP+TN}{TP+TN+FP+FN}
 \]
-
+$$
 #### Precision
-
+$$
 \[
 Precision=\frac{TP}{TP+FP}
 \]
-
+$$
 Out of all predicted positives, how many were actually positive?
 
 #### Recall
 
-\[
+$$\[
 Recall=\frac{TP}{TP+FN}
-\]
+\]$$
 
 Out of all actual positives, how many were correctly identified?
 
 #### F1-Score
-
+$$
 \[
 F1=2\times\frac{Precision\times Recall}{Precision+Recall}
-\]
+\]$$
 
 Harmonic mean of precision and recall.
 

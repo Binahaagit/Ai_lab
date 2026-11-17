@@ -1,5 +1,7 @@
-# Q2
-# EXPERIMENT: TEMPLATE MATCHING USING MSE (MEAN SQUARED ERROR)
+# Q2 - Given an original image and a template image, perform template matching using Mean Squared Error (MSE).
+# Find the best matching location of the template in the original image and draw a rectangle around the matched region.
+
+## TEMPLATE MATCHING USING MSE (MEAN SQUARED ERROR) ##
 
 # ============================================================
 # CODE 1: USING OPENCV BUILT-IN FUNCTION
